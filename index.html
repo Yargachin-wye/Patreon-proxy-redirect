@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Patreon Redirect</title>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    window.onload = () => {
+      const query = new URLSearchParams(window.location.search);
+      const code = query.get("code");
+
+      if (!code) {
+        document.body.innerText = "Error: parameter 'code' not found.";
+        return;
+      }
+
+      const isAndroid = /Android/i.test(navigator.userAgent);
+
+      if (isAndroid) {
+        window.location.href = `clickerapp://auth?code=${code}`;
+      } else {
+        window.location.href = `http://localhost:12345/?code=${code}`;
+      }
+    };
+  </script>
 </head>
 <body>
-  <script>
-    // Получаем параметр code из URL
-    const params = new URLSearchParams(window.location.search);
-    const code = params.get('code');
-    
-    if (code) {
-      // Редирект на локальный слушатель
-      // Убедитесь, что порт совпадает с тем, что в Unity: listenerLocalhost
-      window.location.href = `http://localhost:12345/?code=${encodeURIComponent(code)}`;
-    } else {
-      // Если нет code — показываем ошибку
-      document.body.innerHTML = '<h2>No code provided in query string.</h2>';
-    }
-  </script>
+  Please wait... Redirecting back to the app.
 </body>
 </html>
