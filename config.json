@@ -1,34 +1,34 @@
 {
   "configList": [
     {
-      "clientId": "patreonClientId",
-      "url": "KrVMFRPgg6J9bmjObvEOlvX2qQxaf_R99w-8cb3q1xvLOAA1p0qfO9wrwq5CPQ5N"
+      "key": "patreonClientId",
+      "val": "KrVMFRPgg6J9bmjObvEOlvX2qQxaf_R99w-8cb3q1xvLOAA1p0qfO9wrwq5CPQ5N"
     },
     {
-      "label": "patreonListenerLocalhost",
-      "url": "http://localhost:12345/"
+      "key": "patreonListenerLocalhost",
+      "val": "http://localhost:12345/"
     },
     {
-      "label": "patreonRedirectUri",
-      "url": "https://yargachin-wye.github.io/Patreon-proxy-redirect/"
+      "key": "patreonRedirectUri",
+      "val": "https://yargachin-wye.github.io/Patreon-proxy-redirect/"
     },
     {
-      "label": "patreonScope",
-      "url": "identity"
+      "key": "patreonScope",
+      "val": "identity"
     }
   ],
   "textLinkList": [
     {
-      "label": "Поддержка",
-      "url": "https://support.example.com"
+      "key": "Поддержка",
+      "val": "https://support.example.com"
     },
     {
-      "label": "Наш сайт",
-      "url": "https://example.com"
+      "key": "Наш сайт",
+      "val": "https://example.com"
     },
     {
-      "label": "API входа",
-      "url": "https://api.example.com/auth"
+      "key": "API входа",
+      "val": "https://api.example.com/auth"
     }
   ]
 }
